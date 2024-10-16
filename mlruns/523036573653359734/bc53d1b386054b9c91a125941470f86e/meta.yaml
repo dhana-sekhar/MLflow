@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/sekhar/Documents/Documents%20-%20Sekhar%E2%80%99s%20MacBook%20Air/temp/git_temp/MLflow/mlruns/523036573653359734/bc53d1b386054b9c91a125941470f86e/artifacts
+end_time: 1729092645705
+entry_point_name: ''
+experiment_id: '523036573653359734'
+lifecycle_stage: active
+run_id: bc53d1b386054b9c91a125941470f86e
+run_name: valuable-grub-374
+run_uuid: bc53d1b386054b9c91a125941470f86e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729092645647
+status: 4
+tags: []
+user_id: sekhar

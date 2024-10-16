@@ -45,9 +45,12 @@ if __name__ == "__main__":
     alpha = args.alpha
     l1_ratio = args.l1_ratio
 
-    exp = mlflow.set_experiment(experiment_name="Frist Experiment")
+    exp = mlflow.set_experiment(experiment_name="Frist Experiment v2")
+    # exp_id = mlflow.create_experiment(name="Frist Create Experiment")
+    # get_exp = mlflow.get_experiment(exp_id)
 
-    with mlflow.start_run(experiment_id=exp.experiment_id):
+    with mlflow.start_run(experiment_id=exp.experiment_id, log_system_metrics=True):
+    # with mlflow.start_run(experiment_id=exp_id):
         lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
         lr.fit(train_x, train_y)
 
@@ -60,9 +63,22 @@ if __name__ == "__main__":
         print("  MAE: %s" % mae)
         print("  R2: %s" % r2)
 
-        mlflow.log_param("Alpha", alpha)
-        mlflow.log_param("l1_ratio", l1_ratio)
-        mlflow.log_metric("RMSE", rmse)
-        mlflow.log_metric("MAE", mae)
-        mlflow.log_metric("R2", r2)
+        params = {
+            "Alpha": alpha,
+            "l1_ratio": l1_ratio
+        }
+        mlflow.log_params(params)
+
+        metrics = {
+            "RMSE": rmse,
+            "MAE": mae,
+            "R2": r2
+        }
+        mlflow.log_metrics(metrics)
+        # mlflow.log_param("Alpha", alpha)
+        # mlflow.log_param("l1_ratio", l1_ratio)
+        # mlflow.log_metric("RMSE", rmse)
+        # mlflow.log_metric("MAE", mae)
+        # mlflow.log_metric("R2", r2)
         mlflow.sklearn.log_model(lr, "myModel")
+
