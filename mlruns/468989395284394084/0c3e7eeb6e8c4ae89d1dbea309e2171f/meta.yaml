@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/sekhar/Documents/Documents%20-%20Sekhar%E2%80%99s%20MacBook%20Air/temp/git_temp/MLflow/mlruns/468989395284394084/0c3e7eeb6e8c4ae89d1dbea309e2171f/artifacts
+end_time: 1729075051341
+entry_point_name: ''
+experiment_id: '468989395284394084'
+lifecycle_stage: active
+run_id: 0c3e7eeb6e8c4ae89d1dbea309e2171f
+run_name: unleashed-bee-87
+run_uuid: 0c3e7eeb6e8c4ae89d1dbea309e2171f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729075049427
+status: 3
+tags: []
+user_id: sekhar

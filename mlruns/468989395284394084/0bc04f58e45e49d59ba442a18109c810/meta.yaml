@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/sekhar/Documents/Documents%20-%20Sekhar%E2%80%99s%20MacBook%20Air/temp/git_temp/MLflow/mlruns/468989395284394084/0bc04f58e45e49d59ba442a18109c810/artifacts
+end_time: 1729074991613
+entry_point_name: ''
+experiment_id: '468989395284394084'
+lifecycle_stage: active
+run_id: 0bc04f58e45e49d59ba442a18109c810
+run_name: dapper-seal-565
+run_uuid: 0bc04f58e45e49d59ba442a18109c810
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729074989495
+status: 3
+tags: []
+user_id: sekhar

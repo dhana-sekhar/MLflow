@@ -6,14 +6,15 @@ import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
+import mlflow, mlflow.sklearn
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
 
 #get arguments from command
 parser = argparse.ArgumentParser()
-parser.add_argument("--alpha", type=float, required=False, default=0.5)
-parser.add_argument("--l1_ratio", type=float, required=False, default=0.5)
+parser.add_argument("--alpha", type=float, required=False, default=0.01)
+parser.add_argument("--l1_ratio", type=float, required=False, default=0.01)
 args = parser.parse_args()
 
 #evaluation function
@@ -44,14 +45,24 @@ if __name__ == "__main__":
     alpha = args.alpha
     l1_ratio = args.l1_ratio
 
-    lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
-    lr.fit(train_x, train_y)
+    exp = mlflow.set_experiment(experiment_name="Frist Experiment")
 
-    predicted_qualities = lr.predict(test_x)
+    with mlflow.start_run(experiment_id=exp.experiment_id):
+        lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
+        lr.fit(train_x, train_y)
 
-    (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
+        predicted_qualities = lr.predict(test_x)
 
-    print("Elasticnet model (alpha={:f}, l1_ratio={:f}):".format(alpha, l1_ratio))
-    print("  RMSE: %s" % rmse)
-    print("  MAE: %s" % mae)
-    print("  R2: %s" % r2)
+        (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
+
+        print("Elasticnet model (alpha={:f}, l1_ratio={:f}):".format(alpha, l1_ratio))
+        print("  RMSE: %s" % rmse)
+        print("  MAE: %s" % mae)
+        print("  R2: %s" % r2)
+
+        mlflow.log_param("Alpha", alpha)
+        mlflow.log_param("l1_ratio", l1_ratio)
+        mlflow.log_metric("RMSE", rmse)
+        mlflow.log_metric("MAE", mae)
+        mlflow.log_metric("R2", r2)
+        mlflow.sklearn.log_model(lr, "myModel")
