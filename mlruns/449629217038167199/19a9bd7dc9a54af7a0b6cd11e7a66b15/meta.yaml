@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/sekhar/Documents/Documents%20-%20Sekhar%E2%80%99s%20MacBook%20Air/temp/git_temp/MLflow/mlruns/449629217038167199/19a9bd7dc9a54af7a0b6cd11e7a66b15/artifacts
+end_time: 1729093336907
+entry_point_name: ''
+experiment_id: '449629217038167199'
+lifecycle_stage: active
+run_id: 19a9bd7dc9a54af7a0b6cd11e7a66b15
+run_name: Runer6
+run_uuid: 19a9bd7dc9a54af7a0b6cd11e7a66b15
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729093334442
+status: 3
+tags: []
+user_id: sekhar
