@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/sekhar/Documents/Documents%20-%20Sekhar%E2%80%99s%20MacBook%20Air/temp/git_temp/MLflow/mlruns/927310593676952069/ea5a2b3b986b4d2aafc644568a07ebae/artifacts
+end_time: 1729332083686
+entry_point_name: ''
+experiment_id: '927310593676952069'
+lifecycle_stage: active
+run_id: ea5a2b3b986b4d2aafc644568a07ebae
+run_name: secretive-bug-275
+run_uuid: ea5a2b3b986b4d2aafc644568a07ebae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729332078965
+status: 3
+tags: []
+user_id: sekhar

@@ -15,8 +15,8 @@ logger = logging.getLogger(__name__)
 
 # Get arguments from command line
 parser = argparse.ArgumentParser()
-parser.add_argument("--alpha", type=float, required=False, default=0.01)
-parser.add_argument("--l1_ratio", type=float, required=False, default=0.01)
+parser.add_argument("--alpha", type=float, required=False, default=0.1)
+parser.add_argument("--l1_ratio", type=float, required=False, default=0.3)
 args = parser.parse_args()
 
 # Evaluation function
@@ -46,7 +46,7 @@ if __name__ == "__main__":
     alpha = args.alpha
     l1_ratio = args.l1_ratio
 
-    exp = mlflow.set_experiment(experiment_name="First Experiment with signature")
+    exp = mlflow.set_experiment(experiment_name="signature and evaluate ")
 
     # Start the MLflow run
     with mlflow.start_run(experiment_id=exp.experiment_id, log_system_metrics=True):
@@ -81,3 +81,11 @@ if __name__ == "__main__":
         # Log the model with the signature and an input example
         input_example = test_x.iloc[:1]  # Use a single test instance as input example
         mlflow.sklearn.log_model(lr, "myModel", signature=signature, input_example=input_example)
+        artifacts_uri = mlflow.get_artifact_uri("myModel")
+        mlflow.evaluate(
+        artifacts_uri,
+        test,
+        targets="quality",
+        model_type="regressor",
+        evaluators=["default"]
+        )

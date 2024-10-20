@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/sekhar/Documents/Documents%20-%20Sekhar%E2%80%99s%20MacBook%20Air/temp/git_temp/MLflow/mlruns/927310593676952069/dc14e88d2b4b4bb997b2d24098324453/artifacts
+end_time: 1729332562588
+entry_point_name: ''
+experiment_id: '927310593676952069'
+lifecycle_stage: active
+run_id: dc14e88d2b4b4bb997b2d24098324453
+run_name: tasteful-lynx-819
+run_uuid: dc14e88d2b4b4bb997b2d24098324453
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729332558087
+status: 3
+tags: []
+user_id: sekhar

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/sekhar/Documents/Documents%20-%20Sekhar%E2%80%99s%20MacBook%20Air/temp/git_temp/MLflow/mlruns/149676254800727544/3bb90c8dd6da415b9818438c67477476/artifacts
+end_time: 1729164023902
+entry_point_name: ''
+experiment_id: '149676254800727544'
+lifecycle_stage: active
+run_id: 3bb90c8dd6da415b9818438c67477476
+run_name: indecisive-rook-979
+run_uuid: 3bb90c8dd6da415b9818438c67477476
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729164020894
+status: 3
+tags: []
+user_id: sekhar

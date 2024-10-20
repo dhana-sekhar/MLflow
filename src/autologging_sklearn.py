@@ -44,7 +44,7 @@ if __name__ == "__main__":
 
     alpha = args.alpha
     l1_ratio = args.l1_ratio
-    mlflow.set_tracking_uri(uri = "http://127.0.0.1:5000")
+    mlflow.set_tracking_uri(uri = "http://127.0.0.1:5001")
     exp = mlflow.set_experiment(experiment_name="Frist Experiment Autologging")
     
     with mlflow.start_run(experiment_id=exp.experiment_id, log_system_metrics=True):

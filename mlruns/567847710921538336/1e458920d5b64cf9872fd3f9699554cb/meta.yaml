@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/sekhar/Documents/Documents%20-%20Sekhar%E2%80%99s%20MacBook%20Air/temp/git_temp/MLflow/mlruns/567847710921538336/1e458920d5b64cf9872fd3f9699554cb/artifacts
+end_time: 1729331747265
+entry_point_name: ''
+experiment_id: '567847710921538336'
+lifecycle_stage: active
+run_id: 1e458920d5b64cf9872fd3f9699554cb
+run_name: rare-kite-713
+run_uuid: 1e458920d5b64cf9872fd3f9699554cb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729331745087
+status: 3
+tags: []
+user_id: sekhar

@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1729397600373
+current_stage: None
+description: ''
+last_updated_timestamp: 1729397600373
+name: Elastic Net local
+run_id: dc14e88d2b4b4bb997b2d24098324453
+run_link: ''
+source: file:///Users/sekhar/Documents/Documents%20-%20Sekhar%E2%80%99s%20MacBook%20Air/temp/git_temp/MLflow/mlruns/927310593676952069/dc14e88d2b4b4bb997b2d24098324453/artifacts/myModel
+status: READY
+status_message: null
+storage_location: file:///Users/sekhar/Documents/Documents%20-%20Sekhar%E2%80%99s%20MacBook%20Air/temp/git_temp/MLflow/mlruns/927310593676952069/dc14e88d2b4b4bb997b2d24098324453/artifacts/myModel
+user_id: null
+version: 1
