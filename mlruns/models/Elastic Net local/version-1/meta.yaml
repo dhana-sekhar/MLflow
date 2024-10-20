@@ -1,8 +1,9 @@
-aliases: []
+aliases:
+- champion
 creation_timestamp: 1729397600373
-current_stage: None
+current_stage: Staging
 description: ''
-last_updated_timestamp: 1729397600373
+last_updated_timestamp: 1729399154240
 name: Elastic Net local
 run_id: dc14e88d2b4b4bb997b2d24098324453
 run_link: ''

@@ -1,0 +1,16 @@
+name: "Elastice Regression project"
+
+# conda_env: conda.yaml
+python_env: /Users/sekhar/Documents/Documents - Sekhar’s MacBook Air/temp/git_temp/MLflow/mlruns/149676254800727544/3bb90c8dd6da415b9818438c67477476/artifacts/model/python_env.yaml
+
+entry_points:
+  ElasticNet:
+    command: "python3 src/autologging_sklearn.py --alpha={alpha} --l1_ratio={l1_ratio}"
+    parameters:
+      alpha:
+        type: float
+        default: 0.4
+
+      l1_ratio:
+        type: float
+        default: 0.4

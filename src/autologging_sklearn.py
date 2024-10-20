@@ -13,8 +13,8 @@ logger = logging.getLogger(__name__)
 
 #get arguments from command
 parser = argparse.ArgumentParser()
-parser.add_argument("--alpha", type=float, required=False, default=0.01)
-parser.add_argument("--l1_ratio", type=float, required=False, default=0.01)
+parser.add_argument("--alpha", type=float, required=False, default=0.8)
+parser.add_argument("--l1_ratio", type=float, required=False, default=0.8)
 args = parser.parse_args()
 
 #evaluation function
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     
     with mlflow.start_run(experiment_id=exp.experiment_id, log_system_metrics=True):
     # with mlflow.start_run(experiment_id=exp_id):
-        mlflow.sklearn.autolog(log_input_examples=True)
+        mlflow.sklearn.autolog(log_input_examples=True, registered_model_name="Elastic Net remote")
         lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
         lr.fit(train_x, train_y)
 
