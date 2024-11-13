@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM, Trainer, TrainingArguments
 import torch
 
-hf_token = "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"
+hf_token = "your token"
 
 # Load model and tokenizer
 # tokenizer = AutoTokenizer.from_pretrained("TheBloke/Mistral-7B-v0.1-GGUF", use_auth_token=hf_token)
